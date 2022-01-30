@@ -1,4 +1,4 @@
-import { MAButtonTypes } from "../../shared/types/input";
+import { MAButtonTypes } from "types/input";
 import { ButtonStyle } from "./style";
 
 const MAButton = ({ children }: MAButtonTypes) => {
