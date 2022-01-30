@@ -1,11 +1,7 @@
-import React from "react";
+import { MAButtonTypes } from "../../shared/types/input";
 import { ButtonStyle } from "./style";
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const MAButton = ({ children }: Props) => {
+const MAButton = ({ children }: MAButtonTypes) => {
   return <ButtonStyle>{children}</ButtonStyle>;
 };
 
