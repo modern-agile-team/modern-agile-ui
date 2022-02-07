@@ -31,3 +31,4 @@
 
 ### 📘 프로젝트 참고 자료
 * [MUI](https://mui.com/)
+* [Figma] (https://www.figma.com/file/gchC3ckb2nXdCNZyOCn34S/%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C?node-id=0%3A1)
