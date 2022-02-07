@@ -1,5 +1,18 @@
 # 🎨 Modern-Agile-Design-System
 
+### 📄 협업 규칙
+#### 🖊 커밋 메시지 규칙
+**<font color="green">작업</font>(<font color="red">브랜치명</font>): <font color="purple">메시지</font> #<font color="blue">이슈번호</font>** <br/> ex) `Feat(MAButton): 버튼 컴포넌트 생성 #1 `
+
+#### ⭐ PR
+- PR시 이슈 링크 반드시 할 것
+- 알맞은 라벨 추가할 것
+
+#### ❗ 이슈
+코드 작업하기 전에 반드시 이슈 생성할 것
+
+---
+
 ### 🛒 작업 리스트
 #### 1️⃣ Input System
 > __🖱 Button__ &nbsp;&nbsp;&nbsp; __🖋Input__ &nbsp;&nbsp;&nbsp; __✅CheckBox__ &nbsp;&nbsp;&nbsp; __📻Radio__ &nbsp;&nbsp;&nbsp; __🔍SelectBox__ &nbsp;&nbsp;&nbsp; __🥇Rating__
@@ -18,3 +31,4 @@
 
 ### 📘 프로젝트 참고 자료
 * [MUI](https://mui.com/)
+* [Figma](https://www.figma.com/file/gchC3ckb2nXdCNZyOCn34S/%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C?node-id=0%3A1)
