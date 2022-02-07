@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import MAButton from "../components/MAButton";
+import MAButton from "@components/MAButton";
 
 export default {
   title: "Example/MAButton",

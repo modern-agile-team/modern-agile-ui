@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "components/*": ["src/components/*"],
-      "stories/*": ["src/stories/*"],
-      "types/*": ["src/shared/types/*"]
+      "@components/*": ["src/components/*"],
+      "@stories/*": ["src/stories/*"],
+      "@shared/*": ["src/shared/*"]
     }
   }
 }
