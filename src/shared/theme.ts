@@ -1,4 +1,4 @@
-import { ColorTypes } from "./types/colors";
+import { ColorTypes, TypographyTypes } from "./types/themes";
 
 export const COLORS: ColorTypes = {
   MAIN: {
@@ -47,5 +47,81 @@ export const COLORS: ColorTypes = {
     LINEAR1: "background: linear-gradient(180deg, #6550FF 0%, rgba(101, 80, 255, 0) 85.61%);",
     LINEAR2:
       "background: linear-gradient(180deg, rgba(236, 229, 255, 0.5) 0%, rgba(236, 229, 255, 0) 100%);",
+  },
+};
+
+export const Typography: TypographyTypes = {
+  HEAD: {
+    600: {
+      fontSize: "44px",
+      fontWeight: "bold",
+      lineHeight: `${1.3 * 44}px`,
+    },
+    500: {
+      fontSize: "36px",
+      fontWeight: "bold",
+      lineHeight: `${1.3 * 36}px`,
+    },
+    400: {
+      fontSize: "28px",
+      fontWeight: "bold",
+      lineHeight: `${1.3 * 28}px`,
+    },
+    300: {
+      fontSize: "24px",
+      fontWeight: "bold",
+      lineHeight: `${1.3 * 24}px`,
+    },
+    200: {
+      fontSize: "20px",
+      fontWeight: "bold",
+      lineHeight: `${1.3 * 20}px`,
+    },
+    100: {
+      fontSize: "16px",
+      fontWeight: "bold",
+      lineHeight: `${1.3 * 16}px`,
+    },
+  },
+  BODY: {
+    400: {
+      fontSize: "20px",
+      fontWeight: "normal",
+      lineHeight: `${1.7 * 20}px`,
+    },
+    300: {
+      fontSize: "18px",
+      fontWeight: "normal",
+      lineHeight: `${1.7 * 18}px`,
+    },
+    200: {
+      fontSize: "16px",
+      fontWeight: "normal",
+      lineHeight: `${1.7 * 16}px`,
+    },
+    100: {
+      fontSize: "14px",
+      fontWeight: "normal",
+      lineHeight: `${1.7 * 14}px`,
+    },
+  },
+  DISPLAY: {
+    200: {
+      fontSize: "48px",
+      fontWeight: "lighter",
+      lineHeight: `${1.3 * 48}px`,
+    },
+    100: {
+      fontSize: "40px",
+      fontWeight: "lighter",
+      lineHeight: `${1.3 * 40}px`,
+    },
+  },
+  LEADPARAGRAPH: {
+    100: {
+      fontSize: "22px",
+      fontWeight: "normal",
+      lineHeight: `${1.5 * 22}px`,
+    },
   },
 };
