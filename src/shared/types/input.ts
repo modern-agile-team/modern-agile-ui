@@ -4,4 +4,6 @@ export interface MAButtonTypes {
   children: React.ReactNode;
 }
 
-export interface MACheckBoxTypes {}
+export interface MACheckBoxTypes {
+  sizes?: "xs" | "s" | "m" | "l" | "xl";
+}
