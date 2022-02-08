@@ -25,3 +25,25 @@ Default.args = {
   disabled: false,
   sizes: "l",
 };
+
+export const Example1 = Template.bind({});
+Example1.args = {
+  onChange: (e) => {
+    console.log(e?.target.value);
+    console.log(e?.target.checked);
+  },
+  value: "hi",
+  disabled: true,
+  sizes: "xs",
+};
+
+export const Example2 = Template.bind({});
+Example2.args = {
+  onChange: (e) => {
+    console.log(e?.target.value);
+    console.log(e?.target.checked);
+  },
+  value: "hi",
+  disabled: false,
+  sizes: "xl",
+};
