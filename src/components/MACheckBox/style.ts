@@ -16,12 +16,14 @@ export const InvisibleCheckBox = styled.input.attrs({
 export const VisibleCheckBox = styled.div<{
   size: string;
   borderColor: string;
+  backgroundColor: string;
 }>`
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 6px;
   width: ${(props) => props.size};
   height: ${(props) => props.size};
-  border-radius: 6px;
+  background: ${(props) => props.backgroundColor};
   border: 1px solid ${(props) => props.borderColor};
 `;

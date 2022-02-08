@@ -7,10 +7,14 @@ export default {
   component: MACheckBox,
 } as ComponentMeta<typeof MACheckBox>;
 
-const Template: ComponentStory<typeof MACheckBox> = ({ onChange, value }) => {
+const Template: ComponentStory<typeof MACheckBox> = ({
+  onChange,
+  value,
+  disabled,
+}) => {
   return (
     <StoryWrapper>
-      <MACheckBox onChange={onChange} value={value} />
+      <MACheckBox onChange={onChange} value={value} disabled={disabled} />
     </StoryWrapper>
   );
 };
@@ -22,4 +26,5 @@ Default.args = {
     console.log(e?.target.checked);
   },
   value: "hi",
+  disabled: false,
 };

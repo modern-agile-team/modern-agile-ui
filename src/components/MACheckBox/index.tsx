@@ -26,8 +26,6 @@ const MACheckBox = ({
     }
   }, [sizes]);
 
-  const borderColor = COLORS.DARK.DARK4;
-
   const clickCheckBox = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       setIsChecked(!isChecked);
@@ -35,6 +33,19 @@ const MACheckBox = ({
     },
     [isChecked, onChange]
   );
+
+  const backgroundColor = useMemo(() => {
+    if (disabled) {
+      return isChecked ? COLORS.MAIN.SUBTLE : COLORS.LIGHT.LIGHT3;
+    } else {
+      return isChecked ? COLORS.MAIN.COMMON : "white";
+    }
+  }, [disabled, isChecked]);
+
+  const borderColor = useMemo(() => {
+    if (disabled) return COLORS.MAIN.SUBTLE;
+    else return isChecked ? COLORS.MAIN.COMMON : COLORS.DARK.DARK4;
+  }, [disabled, isChecked]);
 
   return (
     <StyledLabel>
@@ -44,7 +55,11 @@ const MACheckBox = ({
         onChange={clickCheckBox}
         disabled={disabled}
       />
-      <VisibleCheckBox borderColor={borderColor} size={size}>
+      <VisibleCheckBox
+        backgroundColor={backgroundColor}
+        borderColor={borderColor}
+        size={size}
+      >
         {isChecked && "✔"}
       </VisibleCheckBox>
     </StyledLabel>
