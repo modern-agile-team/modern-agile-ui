@@ -5,7 +5,7 @@
       "@components/*": ["src/components/*"],
       "@stories/*": ["src/stories/*"],
       "@shared/*": ["src/shared/*"],
-      "@MAIcons": ["src/MAIcons"]
+      "@MAIcons/*": ["src/MAIcons/*"]
     }
   }
 }
