@@ -4,7 +4,13 @@ import { MACheckBoxTypes } from "@shared/types/input";
 import React, { useCallback, useMemo, useState } from "react";
 import { InvisibleCheckBox, StyledLabel, VisibleCheckBox } from "./style";
 
-const MACheckBox = ({ sizes = "m", disabled = false, value, onChange }: MACheckBoxTypes) => {
+const MACheckBox = ({
+  sizes = "m",
+  disabled = false,
+  label = false,
+  value,
+  onChange,
+}: MACheckBoxTypes) => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
   const size = useMemo(() => {
@@ -54,6 +60,7 @@ const MACheckBox = ({ sizes = "m", disabled = false, value, onChange }: MACheckB
       <VisibleCheckBox backgroundColor={backgroundColor} borderColor={borderColor} size={size}>
         {isChecked && <CheckMarker color="#FFF" />}
       </VisibleCheckBox>
+      {label && <span>{label}</span>}
     </StyledLabel>
   );
 };

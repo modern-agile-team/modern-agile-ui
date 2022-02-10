@@ -8,5 +8,6 @@ export interface MACheckBoxTypes {
   sizes?: "xs" | "s" | "m" | "l" | "xl";
   disabled?: boolean;
   value?: string | number;
+  label?: false | string;
   onChange: (e?: React.ChangeEvent<HTMLInputElement>) => void;
 }

@@ -8,6 +8,9 @@ export const StyledLabel = styled.label`
   align-items: center;
   box-sizing: border-box;
   cursor: pointer;
+  span {
+    margin-left: 8px;
+  }
 `;
 
 export const InvisibleCheckBox = styled.input.attrs({
