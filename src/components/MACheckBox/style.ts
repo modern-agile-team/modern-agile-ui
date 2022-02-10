@@ -1,4 +1,7 @@
+import { COLORS } from "@shared/theme";
 import styled from "styled-components";
+
+const mainLighter = COLORS.MAIN.LIGHTER;
 
 export const StyledLabel = styled.label`
   display: flex;
@@ -26,4 +29,8 @@ export const VisibleCheckBox = styled.div<{
   height: ${(props) => props.size};
   background: ${(props) => props.backgroundColor};
   border: 1px solid ${(props) => props.borderColor};
+  &:hover,
+  &:focus {
+    border: 1px solid ${mainLighter};
+  }
 `;
