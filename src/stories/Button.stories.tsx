@@ -6,12 +6,18 @@ export default {
   component: MAButton,
 } as ComponentMeta<typeof MAButton>;
 
-const Template: ComponentStory<typeof MAButton> = ({ children, fill }) => (
-  <MAButton fill={fill}>{children}</MAButton>
+const Template: ComponentStory<typeof MAButton> = ({
+  children,
+  sizes = "m",
+  varient = "contained",
+  disabled = false,
+}) => (
+  <MAButton sizes={sizes} varient={varient} disabled={disabled}>
+    {children}
+  </MAButton>
 );
 
 export const Default = Template.bind({});
 Default.args = {
   children: "버튼",
-  fill: true,
 };
