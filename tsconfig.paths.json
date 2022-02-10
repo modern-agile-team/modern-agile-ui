@@ -4,7 +4,8 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@stories/*": ["src/stories/*"],
-      "@shared/*": ["src/shared/*"]
+      "@shared/*": ["src/shared/*"],
+      "@MAIcons/*": ["src/MAIcons/*"]
     }
   }
 }
