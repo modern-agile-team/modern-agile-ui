@@ -19,5 +19,5 @@ const Template: ComponentStory<typeof MAButton> = ({
 
 export const Default = Template.bind({});
 Default.args = {
-  children: "버튼",
+  children: "Button",
 };

@@ -21,9 +21,8 @@ export const ButtonStyle = styled.button<{
     background: ${props =>
       props.isOutLine ? "black" : `${COLORS.MAIN.DARKER}`};
   }
-
   &:focus {
     outline: 0;
-    box-shadow: 0px 0px 20px #9f7eff;
+    box-shadow: 0px 0px 20px ${COLORS.MAIN.LIGHTER};
   }
 `;

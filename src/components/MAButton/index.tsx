@@ -27,17 +27,22 @@ const MAButton = ({
   }, [sizes]);
 
   const colors = useMemo(() => {
+    if (disabled) return [`${COLORS.MAIN.SUBTLE}`, `${COLORS.LIGHT.LIGHT1}`];
     if (varient === "outlined") {
       setIsOutLine(true); //디자인이 아직 미완이라 하심
       return ["white", "black"];
-    } else {
-      setIsOutLine(false);
-      return [`${COLORS.MAIN.COMMON}`, "white"];
     }
+    setIsOutLine(false);
+    return [`${COLORS.MAIN.COMMON}`, "white"];
   }, [varient]);
 
   return (
-    <ButtonStyle size={VHPaddingFontSize} colors={colors} isOutLine={isOutLine}>
+    <ButtonStyle
+      size={VHPaddingFontSize}
+      colors={colors}
+      isOutLine={isOutLine}
+      disabled={disabled}
+    >
       {children}
     </ButtonStyle>
   );
