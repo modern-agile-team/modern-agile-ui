@@ -2,10 +2,12 @@ import { useCallback, useMemo, useState } from "react";
 import { InvisibleRadio, StyledRadioLabel, VisibleRadio } from "./style";
 
 interface Props {
+  value: string | number;
   size?: "s" | "m" | "l";
   labelLocation?: "top" | "bottom" | "left" | "right";
   label?: false | string;
   disabled?: boolean;
+  onChange: (e?: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const MARadio = ({
@@ -13,6 +15,8 @@ const MARadio = ({
   label = false,
   labelLocation = "right",
   disabled = false,
+  value,
+  onChange,
 }: Props) => {
   const [isCheck, setIsCheck] = useState<boolean>(false);
 
@@ -27,13 +31,17 @@ const MARadio = ({
     }
   }, [size]);
 
-  const clickRadio = useCallback(() => {
-    setIsCheck(!isCheck);
-  }, [isCheck]);
+  const clickRadio = useCallback(
+    (e) => {
+      setIsCheck(!isCheck);
+      onChange(e);
+    },
+    [isCheck]
+  );
 
   return (
     <StyledRadioLabel disabled={disabled} labelLocation={labelLocation}>
-      <InvisibleRadio type="radio" onChange={clickRadio} disabled={disabled} />
+      <InvisibleRadio type="radio" onChange={clickRadio} disabled={disabled} value={value} />
       <VisibleRadio disabled={disabled} radioSize={radioSize} isCheck={isCheck}>
         {isCheck && <div />}
       </VisibleRadio>
