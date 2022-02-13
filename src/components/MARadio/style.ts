@@ -14,18 +14,19 @@ export const InvisibleRadio = styled.input`
 
 export const VisibleRadio = styled.div<{
   isCheck: boolean;
+  radioSize: { outer: string; inner: string };
 }>`
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid ${COLORS.DARK.DARK4};
   background: ${(props) => (props.isCheck ? COLORS.MAIN.COMMON : COLORS.LIGHT.LIGHT4)};
-  width: 24px;
-  height: 24px;
+  width: ${(props) => props.radioSize.outer};
+  height: ${(props) => props.radioSize.outer};
   border-radius: 50%;
   div {
-    width: 14px;
-    height: 14px;
+    width: ${(props) => props.radioSize.inner};
+    height: ${(props) => props.radioSize.inner};
     border-radius: 50%;
     background: ${COLORS.LIGHT.LIGHT4};
   }

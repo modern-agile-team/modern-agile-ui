@@ -6,7 +6,7 @@ export default {
   component: MARadio,
 } as ComponentMeta<typeof MARadio>;
 
-const Template: ComponentStory<typeof MARadio> = () => <MARadio></MARadio>;
+const Template: ComponentStory<typeof MARadio> = ({ size }) => <MARadio size={size}></MARadio>;
 
 export const Default = Template.bind({});
 Default.args = {};
