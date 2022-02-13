@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { CheckCircle, InvisibleRadio, StyledRadioLabel, VisibleRadio } from "./style";
+import { InvisibleRadio, StyledRadioLabel, VisibleRadio } from "./style";
 
 const MARadio = () => {
   const [isCheck, setIsCheck] = useState<boolean>(false);
@@ -11,7 +11,7 @@ const MARadio = () => {
   return (
     <StyledRadioLabel>
       <InvisibleRadio type="radio" onChange={clickRadio} />
-      <VisibleRadio>{isCheck && <CheckCircle />}</VisibleRadio>
+      <VisibleRadio isCheck={isCheck}>{isCheck && <div />}</VisibleRadio>
     </StyledRadioLabel>
   );
 };
