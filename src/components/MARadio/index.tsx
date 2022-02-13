@@ -3,11 +3,17 @@ import { InvisibleRadio, StyledRadioLabel, VisibleRadio } from "./style";
 
 interface Props {
   size?: "s" | "m" | "l";
-  label?: false | string;
   labelLocation?: "top" | "bottom" | "left" | "right";
+  label?: false | string;
+  disabled?: boolean;
 }
 
-const MARadio = ({ size = "m", label = false, labelLocation = "right" }: Props) => {
+const MARadio = ({
+  size = "m",
+  label = false,
+  labelLocation = "right",
+  disabled = false,
+}: Props) => {
   const [isCheck, setIsCheck] = useState<boolean>(false);
 
   const radioSize = useMemo(() => {
@@ -26,9 +32,9 @@ const MARadio = ({ size = "m", label = false, labelLocation = "right" }: Props) 
   }, [isCheck]);
 
   return (
-    <StyledRadioLabel labelLocation={labelLocation}>
-      <InvisibleRadio type="radio" onChange={clickRadio} />
-      <VisibleRadio radioSize={radioSize} isCheck={isCheck}>
+    <StyledRadioLabel disabled={disabled} labelLocation={labelLocation}>
+      <InvisibleRadio type="radio" onChange={clickRadio} disabled={disabled} />
+      <VisibleRadio disabled={disabled} radioSize={radioSize} isCheck={isCheck}>
         {isCheck && <div />}
       </VisibleRadio>
       {label && <span>{label}</span>}

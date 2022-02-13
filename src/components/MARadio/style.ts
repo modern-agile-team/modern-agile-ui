@@ -3,12 +3,14 @@ import styled from "styled-components";
 
 export const StyledRadioLabel = styled.label<{
   labelLocation: string;
+  disabled: boolean;
 }>`
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   position: relative;
+  opacity: ${(props) => props.disabled && 0.5};
   cursor: pointer;
   span {
     font-size: 14px;
@@ -25,6 +27,7 @@ export const InvisibleRadio = styled.input`
 export const VisibleRadio = styled.div<{
   isCheck: boolean;
   radioSize: { outer: string; inner: string };
+  disabled: boolean;
 }>`
   display: flex;
   align-items: center;
@@ -45,7 +48,7 @@ export const VisibleRadio = styled.div<{
     border: 1px solid ${COLORS.MAIN.COMMON};
   }
   &:active {
-    background: ${COLORS.MAIN.DARKER};
+    background: ${(props) => !props.disabled && COLORS.MAIN.DARKER};
   }
 `;
 
