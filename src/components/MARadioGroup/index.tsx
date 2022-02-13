@@ -10,7 +10,7 @@ interface Props {
   onChange: (e?: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const MARadio = ({
+const MARadioGroup = ({
   size = "m",
   label = false,
   labelLocation = "right",
@@ -50,4 +50,4 @@ const MARadio = ({
   );
 };
 
-export default MARadio;
+export default MARadioGroup;
