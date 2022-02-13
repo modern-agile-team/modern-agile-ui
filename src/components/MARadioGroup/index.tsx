@@ -20,6 +20,19 @@ const MARadioGroup = ({
 }: Props) => {
   const [isCheck, setIsCheck] = useState<boolean>(false);
 
+  const direction = useMemo(() => {
+    switch (labelLocation) {
+      case "top":
+        return ["column-reverse", "0 0 8px 0"];
+      case "bottom":
+        return ["column", "8px 0 0 0"];
+      case "left":
+        return ["row-reverse", "0 8px 0 0"];
+      case "right":
+        return ["row", "0 0 0 8px"];
+    }
+  }, [labelLocation]);
+
   const radioSize = useMemo(() => {
     switch (size) {
       case "s":
@@ -40,7 +53,7 @@ const MARadioGroup = ({
   );
 
   return (
-    <StyledRadioLabel disabled={disabled} labelLocation={labelLocation}>
+    <StyledRadioLabel disabled={disabled} direction={direction}>
       <InvisibleRadio type="radio" onChange={clickRadio} disabled={disabled} value={value} />
       <VisibleRadio disabled={disabled} radioSize={radioSize} isCheck={isCheck}>
         {isCheck && <div />}

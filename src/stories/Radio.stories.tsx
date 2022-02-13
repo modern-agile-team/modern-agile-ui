@@ -31,6 +31,9 @@ export const Default = Template.bind({});
 Default.args = {
   label: "hi",
   disabled: false,
-  onChange: (e) => console.log(e?.target.value),
+  onChange: (e) => {
+    console.log(e?.target.value);
+    console.log(e?.target.checked);
+  },
   value: "빨강",
 };

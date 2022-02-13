@@ -2,10 +2,11 @@ import { COLORS } from "@shared/theme";
 import styled from "styled-components";
 
 export const StyledRadioLabel = styled.label<{
-  labelLocation: string;
+  direction: string[];
   disabled: boolean;
 }>`
   display: flex;
+  flex-direction: ${(props) => props.direction[0]};
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
@@ -15,8 +16,7 @@ export const StyledRadioLabel = styled.label<{
   span {
     font-size: 14px;
     color: ${COLORS.DARK.DARK3};
-    position: absolute;
-    ${(props) => props.labelLocation}: -20px;
+    margin: ${(props) => props.direction[1]};
   }
 `;
 
