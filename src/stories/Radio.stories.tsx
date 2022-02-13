@@ -1,13 +1,13 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { StoryWrapper } from "@components/Common";
-import MARadioGroup from "@components/MARadioGroup";
+import Radio from "@components/Radio";
 
 export default {
-  title: "Example/MARadio",
-  component: MARadioGroup,
-} as ComponentMeta<typeof MARadioGroup>;
+  title: "Example/Radio",
+  component: Radio,
+} as ComponentMeta<typeof Radio>;
 
-const Template: ComponentStory<typeof MARadioGroup> = ({
+const Template: ComponentStory<typeof Radio> = ({
   size,
   label,
   labelLocation,
@@ -16,7 +16,7 @@ const Template: ComponentStory<typeof MARadioGroup> = ({
   value,
 }) => (
   <StoryWrapper>
-    <MARadioGroup
+    <Radio
       onChange={onChange}
       size={size}
       label={label}
