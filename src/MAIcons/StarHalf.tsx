@@ -1,8 +1,18 @@
 import IconTypes from "@shared/types/icons";
 
-const StarHalf = ({ color = "#212121" }: IconTypes) => {
+const StarHalf = ({
+  color = "#212121",
+  width = "24",
+  height = "23",
+}: IconTypes) => {
   return (
-    <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 23"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
