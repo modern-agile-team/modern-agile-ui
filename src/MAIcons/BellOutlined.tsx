@@ -2,8 +2,8 @@ import IconTypes from "@shared/types/icons";
 
 const BellOutlined = ({
   color = "#212121",
-  width = "19",
-  height = "21",
+  width = "18",
+  height = "20",
 }: IconTypes) => {
   return (
     <svg
