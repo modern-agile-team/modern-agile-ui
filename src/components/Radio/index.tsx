@@ -3,6 +3,7 @@ import { InvisibleRadio, StyledRadioLabel, VisibleRadio } from "./style";
 
 interface Props {
   value: string | number;
+  name?: string;
   size?: "s" | "m" | "l";
   labelLocation?: "top" | "bottom" | "left" | "right";
   label?: false | string;
@@ -15,6 +16,7 @@ const Radio = ({
   labelLocation = "right",
   label = false,
   disabled = false,
+  name = "",
   value,
   onChange,
 }: Props) => {
@@ -49,12 +51,18 @@ const Radio = ({
       setIsCheck(!isCheck);
       onChange(e);
     },
-    [isCheck]
+    [isCheck, onChange]
   );
 
   return (
     <StyledRadioLabel disabled={disabled} direction={direction}>
-      <InvisibleRadio type="radio" onChange={clickRadio} disabled={disabled} value={value} />
+      <InvisibleRadio
+        type="radio"
+        onChange={clickRadio}
+        disabled={disabled}
+        value={value}
+        name={name}
+      />
       <VisibleRadio disabled={disabled} radioSize={radioSize} isCheck={isCheck}>
         {isCheck && <div />}
       </VisibleRadio>
