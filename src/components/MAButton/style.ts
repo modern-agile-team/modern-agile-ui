@@ -15,11 +15,13 @@ export const ButtonStyle = styled.button<{
     props.isOutLine ? `1px solid ${COLORS.MAIN.COMMON}` : "none"};
   &:hover {
     background: ${props =>
-      props.isOutLine ? "black" : `${COLORS.MAIN.LIGHTER}`};
+      props.isOutLine ? "white" : `${COLORS.MAIN.LIGHTER}`};
+    box-shadow: ${props =>
+      props.isOutLine ? `0px 0px 20px ${COLORS.MAIN.LIGHTER}` : "none"};
   }
   &:active {
     background: ${props =>
-      props.isOutLine ? "black" : `${COLORS.MAIN.DARKER}`};
+      props.isOutLine ? `${COLORS.MAIN.SUBTLE}` : `${COLORS.MAIN.DARKER}`};
   }
   &:focus {
     outline: 0;
