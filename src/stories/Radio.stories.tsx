@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { StoryWrapper } from "@components/Common";
 import Radio from "@components/Radio";
+import MARadioGroup from "@components/MARadioGroup";
 
 export default {
   title: "Example/Radio",
@@ -16,14 +17,10 @@ const Template: ComponentStory<typeof Radio> = ({
   value,
 }) => (
   <StoryWrapper>
-    <Radio
-      onChange={onChange}
-      size={size}
-      label={label}
-      labelLocation={labelLocation}
-      disabled={disabled}
-      value={value}
-    />
+    <MARadioGroup name="민순기" size={size} labelLocation={labelLocation}>
+      <Radio onChange={onChange} label={label} disabled={disabled} value={value} />
+      <Radio onChange={onChange} label={label} disabled={disabled} value={value} />
+    </MARadioGroup>
   </StoryWrapper>
 );
 
@@ -34,6 +31,7 @@ Default.args = {
   onChange: (e) => {
     console.log(e?.target.value);
     console.log(e?.target.checked);
+    console.log(e?.target.name);
   },
   value: "빨강",
 };
