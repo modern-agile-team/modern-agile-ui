@@ -1,14 +1,15 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo } from "react";
 import { InvisibleRadio, StyledRadioLabel, VisibleRadio } from "./style";
 
 interface Props {
   value: string | number;
+  selectedValue?: string;
   name?: string;
   size?: "s" | "m" | "l";
   labelLocation?: "top" | "bottom" | "left" | "right";
   label?: false | string;
   disabled?: boolean;
-  onChange: (e?: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e?: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Radio = ({
@@ -18,10 +19,9 @@ const Radio = ({
   disabled = false,
   name = "",
   value,
+  selectedValue,
   onChange,
 }: Props) => {
-  const [isCheck, setIsCheck] = useState<boolean>(false);
-
   const direction = useMemo(() => {
     switch (labelLocation) {
       case "top":
@@ -48,10 +48,9 @@ const Radio = ({
 
   const clickRadio = useCallback(
     (e) => {
-      setIsCheck(!isCheck);
-      onChange(e);
+      if (onChange) onChange(e);
     },
-    [isCheck, onChange]
+    [selectedValue, onChange]
   );
 
   return (
@@ -63,8 +62,8 @@ const Radio = ({
         value={value}
         name={name}
       />
-      <VisibleRadio disabled={disabled} radioSize={radioSize} isCheck={isCheck}>
-        {isCheck && <div />}
+      <VisibleRadio disabled={disabled} radioSize={radioSize} isCheck={selectedValue === value}>
+        {selectedValue === value && <div />}
       </VisibleRadio>
       {label && <span>{label}</span>}
     </StyledRadioLabel>
