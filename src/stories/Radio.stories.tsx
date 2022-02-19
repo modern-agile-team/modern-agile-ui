@@ -4,13 +4,24 @@ import Radio from "@components/Radio";
 import MARadioGroup from "@components/MARadioGroup";
 
 export default {
-  title: "Example/Radio",
-  component: Radio,
-} as ComponentMeta<typeof Radio>;
+  title: "Example/MARadioGroup",
+  component: MARadioGroup,
+} as ComponentMeta<typeof MARadioGroup>;
 
-const Template: ComponentStory<typeof Radio> = ({ size, labelLocation, onChange }) => (
+const Template: ComponentStory<typeof MARadioGroup> = ({
+  size,
+  labelLocation,
+  onChange,
+  direction,
+}) => (
   <StoryWrapper>
-    <MARadioGroup onChange={onChange} name="민순기" size={size} labelLocation={labelLocation}>
+    <MARadioGroup
+      direction={direction}
+      onChange={onChange}
+      name="민순기"
+      size={size}
+      labelLocation={labelLocation}
+    >
       <Radio label="빨강" value="빨강" />
       <Radio label="파랑" value="파랑" />
     </MARadioGroup>
@@ -19,8 +30,7 @@ const Template: ComponentStory<typeof Radio> = ({ size, labelLocation, onChange 
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "hi",
-  disabled: false,
+  direction: "column",
   onChange: (e) => {
     console.log(e?.target.value);
     console.log(e?.target.checked);

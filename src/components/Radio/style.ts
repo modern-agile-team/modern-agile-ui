@@ -18,6 +18,17 @@ export const StyledRadioLabel = styled.label<{
     color: ${COLORS.DARK.DARK3};
     margin: ${(props) => props.direction[1]};
   }
+  &:hover,
+  &:focus {
+    .visible-radio {
+      border: 1px solid ${COLORS.MAIN.COMMON};
+    }
+  }
+  &:active {
+    .visible-radio {
+      background: ${(props) => !props.disabled && COLORS.MAIN.DARKER};
+    }
+  }
 `;
 
 export const InvisibleRadio = styled.input`
@@ -42,13 +53,6 @@ export const VisibleRadio = styled.div<{
     height: ${(props) => props.radioSize.inner};
     border-radius: 50%;
     background: ${COLORS.LIGHT.LIGHT4};
-  }
-  &:hover,
-  &:focus {
-    border: 1px solid ${COLORS.MAIN.COMMON};
-  }
-  &:active {
-    background: ${(props) => !props.disabled && COLORS.MAIN.DARKER};
   }
 `;
 

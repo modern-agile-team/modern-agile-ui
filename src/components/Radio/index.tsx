@@ -62,7 +62,12 @@ const Radio = ({
         value={value}
         name={name}
       />
-      <VisibleRadio disabled={disabled} radioSize={radioSize} isCheck={selectedValue === value}>
+      <VisibleRadio
+        className={`visible-radio ${value}`}
+        disabled={disabled}
+        radioSize={radioSize}
+        isCheck={selectedValue === value}
+      >
         {selectedValue === value && <div />}
       </VisibleRadio>
       {label && <span>{label}</span>}

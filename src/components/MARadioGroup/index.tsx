@@ -1,6 +1,8 @@
 import React, { useCallback, useState } from "react";
+import { Wrap } from "./style";
 
 interface Props {
+  direction?: "row" | "column" | "row-reverse" | "column-reverse";
   name?: string;
   size?: string;
   labelLocation?: "top" | "bottom" | "left" | "right";
@@ -9,6 +11,7 @@ interface Props {
 }
 
 const MARadioGroup = ({
+  direction = "column",
   size = "m",
   labelLocation = "right",
   name = "radioGroup",
@@ -26,7 +29,7 @@ const MARadioGroup = ({
   );
 
   return (
-    <div role="radiogroup">
+    <Wrap role="radiogroup" direction={direction}>
       {React.Children.map(children, (child) =>
         React.cloneElement(child, {
           name,
@@ -36,7 +39,7 @@ const MARadioGroup = ({
           selectedValue,
         })
       )}
-    </div>
+    </Wrap>
   );
 };
 
