@@ -55,5 +55,3 @@ export const VisibleRadio = styled.div<{
     background: ${COLORS.LIGHT.LIGHT4};
   }
 `;
-
-export const CheckCircle = styled.div``;

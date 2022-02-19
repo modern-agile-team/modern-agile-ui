@@ -13,14 +13,17 @@ const Template: ComponentStory<typeof MARadioGroup> = ({
   labelLocation,
   onChange,
   direction,
+  distance,
+  name,
 }) => (
   <StoryWrapper>
     <MARadioGroup
       direction={direction}
       onChange={onChange}
-      name="민순기"
+      name={name}
       size={size}
       labelLocation={labelLocation}
+      distance={distance}
     >
       <Radio label="빨강" value="빨강" />
       <Radio label="파랑" value="파랑" />
@@ -31,6 +34,7 @@ const Template: ComponentStory<typeof MARadioGroup> = ({
 export const Default = Template.bind({});
 Default.args = {
   direction: "column",
+  distance: 9,
   onChange: (e) => {
     console.log(e?.target.value);
     console.log(e?.target.checked);

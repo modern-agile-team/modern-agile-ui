@@ -2,6 +2,7 @@ import React, { useCallback, useState } from "react";
 import { Wrap } from "./style";
 
 interface Props {
+  distance?: 3 | 5 | 7 | 9;
   direction?: "row" | "column" | "row-reverse" | "column-reverse";
   name?: string;
   size?: string;
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const MARadioGroup = ({
+  distance = 5,
   direction = "column",
   size = "m",
   labelLocation = "right",
@@ -29,7 +31,7 @@ const MARadioGroup = ({
   );
 
   return (
-    <Wrap role="radiogroup" direction={direction}>
+    <Wrap role="radiogroup" direction={direction} distance={distance}>
       {React.Children.map(children, (child) =>
         React.cloneElement(child, {
           name,
