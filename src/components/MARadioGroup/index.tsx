@@ -2,6 +2,7 @@ import React, { useCallback, useState } from "react";
 import { Wrap } from "./style";
 
 interface Props {
+  defaultValue?: string;
   distance?: 3 | 5 | 7 | 9;
   direction?: "row" | "column" | "row-reverse" | "column-reverse";
   name?: string;
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const MARadioGroup = ({
+  defaultValue = "",
   distance = 5,
   direction = "column",
   size = "m",
@@ -20,7 +22,7 @@ const MARadioGroup = ({
   children,
   onChange,
 }: Props) => {
-  const [selectedValue, setSelectedValue] = useState<string>("");
+  const [selectedValue, setSelectedValue] = useState<string>(defaultValue);
 
   const changeProps = useCallback(
     (e) => {
