@@ -13,6 +13,7 @@ const Template: ComponentStory<typeof MACheckBox> = ({
   disabled,
   sizes,
   label,
+  checked,
 }) => {
   return (
     <StoryWrapper>
@@ -23,6 +24,15 @@ const Template: ComponentStory<typeof MACheckBox> = ({
         disabled={disabled}
         label={label}
       />
+      <MACheckBox
+        sizes={sizes}
+        onChange={onChange}
+        value={value}
+        disabled={disabled}
+        label={label}
+      />
+      <MACheckBox sizes={sizes} onChange={onChange} value={value} disabled={true} label={label} />
+      <MACheckBox sizes={sizes} onChange={onChange} value={value} disabled label={label} checked />
     </StoryWrapper>
   );
 };
