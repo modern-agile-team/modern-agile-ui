@@ -1,39 +1,44 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { StoryWrapper } from "@components/Common";
 import Radio from "@components/Radio";
+import MARadioGroup from "@components/MARadioGroup";
 
 export default {
-  title: "Example/Radio",
-  component: Radio,
-} as ComponentMeta<typeof Radio>;
+  title: "Example/MARadioGroup",
+  component: MARadioGroup,
+} as ComponentMeta<typeof MARadioGroup>;
 
-const Template: ComponentStory<typeof Radio> = ({
+const Template: ComponentStory<typeof MARadioGroup> = ({
   size,
-  label,
   labelLocation,
-  disabled,
   onChange,
-  value,
+  direction,
+  distance,
+  name,
+  defaultValue,
 }) => (
   <StoryWrapper>
-    <Radio
+    <MARadioGroup
+      defaultValue={defaultValue}
+      direction={direction}
       onChange={onChange}
+      name={name}
       size={size}
-      label={label}
       labelLocation={labelLocation}
-      disabled={disabled}
-      value={value}
-    />
+      distance={distance}
+    >
+      <Radio label="빨강" value="빨강" />
+      <Radio label="파랑" value="파랑" />
+    </MARadioGroup>
   </StoryWrapper>
 );
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "hi",
-  disabled: false,
+  defaultValue: "파랑",
+  direction: "column",
+  distance: 9,
   onChange: (e) => {
     console.log(e?.target.value);
-    console.log(e?.target.checked);
   },
-  value: "빨강",
 };
