@@ -10,7 +10,11 @@ export default {
 const Template: ComponentStory<typeof MASelect> = () => {
   return (
     <StoryWrapper>
-      <MASelect />
+      <MASelect>
+        <li>ㅎㅇ</li>
+        <li>ㅎㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</li>
+        <li>ㅎㅇㅇㅇ</li>
+      </MASelect>
     </StoryWrapper>
   );
 };
