@@ -8,6 +8,7 @@ const MAButton = ({
   varient = "contained",
   sizes = "m",
   disabled = false,
+  onClick,
 }: MAButtonTypes) => {
   const [isOutLine, setIsOutLine] = useState<boolean>(false);
 
@@ -29,7 +30,7 @@ const MAButton = ({
   const colors = useMemo(() => {
     if (disabled) return [`${COLORS.MAIN.SUBTLE}`, `${COLORS.LIGHT.LIGHT1}`];
     if (varient === "outlined") {
-      setIsOutLine(true); //디자인이 아직 미완이라 하심
+      setIsOutLine(true);
       return ["white", "black"];
     }
     setIsOutLine(false);
@@ -42,6 +43,7 @@ const MAButton = ({
       colors={colors}
       isOutLine={isOutLine}
       disabled={disabled}
+      onClick={onClick}
     >
       {children}
     </ButtonStyle>

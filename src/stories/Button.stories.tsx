@@ -11,8 +11,14 @@ const Template: ComponentStory<typeof MAButton> = ({
   sizes = "m",
   varient = "contained",
   disabled = false,
+  onClick,
 }) => (
-  <MAButton sizes={sizes} varient={varient} disabled={disabled}>
+  <MAButton
+    sizes={sizes}
+    varient={varient}
+    disabled={disabled}
+    onClick={onClick}
+  >
     {children}
   </MAButton>
 );

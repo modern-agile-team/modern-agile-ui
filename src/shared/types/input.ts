@@ -5,6 +5,7 @@ export interface MAButtonTypes {
   varient?: "outlined" | "contained";
   sizes?: "xs" | "s" | "m" | "l" | "xl";
   disabled?: boolean;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export interface MACheckBoxTypes {
