@@ -1,5 +1,6 @@
 import { StoryWrapper } from "@components/Common";
 import MASelect from "@components/MASelect";
+import MenuItem from "@components/MenuItem";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 export default {
@@ -11,9 +12,10 @@ const Template: ComponentStory<typeof MASelect> = () => {
   return (
     <StoryWrapper>
       <MASelect>
-        <li>ㅎㅇ</li>
-        <li>ㅎㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</li>
-        <li>ㅎㅇㅇㅇ</li>
+        <MenuItem value="hi">hi</MenuItem>
+        <MenuItem value="bye">bye</MenuItem>
+        <MenuItem value="hello">hello</MenuItem>
+        <MenuItem value="goodbye">goodbye</MenuItem>
       </MASelect>
     </StoryWrapper>
   );

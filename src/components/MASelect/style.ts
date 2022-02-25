@@ -22,6 +22,9 @@ export const Wrap = styled.div`
     border: 1px solid ${COLORS.DARK.DARK4};
     position: absolute;
     top: 55px;
+    ul {
+      padding: 8px 0;
+    }
   }
   svg {
     right: 21.25px;

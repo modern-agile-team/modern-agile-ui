@@ -1,4 +1,5 @@
 import React from "react";
+import { MenuLI } from "./style";
 
 interface Props {
   value?: string | number;
@@ -6,7 +7,7 @@ interface Props {
 }
 
 const MenuItem = ({ value, children }: Props) => {
-  return <li value={value}>{children}</li>;
+  return <MenuLI value={value}>{children}</MenuLI>;
 };
 
 export default MenuItem;
