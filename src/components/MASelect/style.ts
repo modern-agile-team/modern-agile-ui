@@ -13,6 +13,7 @@ export const Wrap = styled.div`
     border-radius: 6px;
     padding: 16px 56px 16px 16px;
     border: 1px solid ${COLORS.DARK.DARK4};
+    min-width: 150px;
     cursor: pointer;
   }
   .options {
@@ -25,6 +26,14 @@ export const Wrap = styled.div`
     ul {
       padding: 8px 0;
     }
+  }
+  #up {
+    transition-duration: 0.3s;
+    transform: rotate(180deg);
+  }
+  #down {
+    transition-duration: 0.3s;
+    transform: rotate(360deg);
   }
   svg {
     right: 21.25px;

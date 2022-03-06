@@ -1,12 +1,9 @@
 import IconTypes from "@shared/types/icons";
 
-const ChevronDown = ({
-  color = "#212121",
-  width = "15",
-  height = "8",
-}: IconTypes) => {
+const ChevronDown = ({ color = "#212121", width = "15", height = "8", id = "" }: IconTypes) => {
   return (
     <svg
+      id={id}
       width={width}
       height={height}
       viewBox="0 0 15 8"
