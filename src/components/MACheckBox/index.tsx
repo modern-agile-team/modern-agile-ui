@@ -5,13 +5,14 @@ import React, { useCallback, useMemo, useState } from "react";
 import { InvisibleCheckBox, StyledLabel, VisibleCheckBox } from "./style";
 
 const MACheckBox = ({
+  checked = false,
   sizes = "m",
   disabled = false,
   label = false,
   value,
   onChange,
 }: MACheckBoxTypes) => {
-  const [isChecked, setIsChecked] = useState<boolean>(false);
+  const [isChecked, setIsChecked] = useState<boolean>(checked);
 
   const size = useMemo(() => {
     switch (sizes) {

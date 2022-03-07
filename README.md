@@ -4,9 +4,22 @@
 #### 🖊 커밋 메시지 규칙
 **<font color="green">작업</font>(<font color="red">브랜치명</font>): <font color="purple">메시지</font> #<font color="blue">이슈번호</font>** <br/> ex) `Feat(MAButton): 버튼 컴포넌트 생성 #1 `
 
+__Commit Convention__
+> __Feat__: 새로운 기능의 추가 <br />
+__Modify__: 코드 수정 (기능의 향상이 이루어졌을 때) <br />
+__Refactor__: 코드 수정 (코드 리팩토링) <br />
+__Fix__: 버그를 고친 경우 <br />
+__Test__: 테스트 관련 <br />
+__Style__: 코드 포맷 변경, 세미콜론 누락, 콘솔로그, 코드 수정이 없는 경우 <br />
+__Rename__: 파일 혹은 폴더명 수정 <br />
+__Remove__: 파일 삭제
+__Module__: 새로운 모듈 추가
+__Docs__: 문서 수정
+
 #### ⭐ PR
 - PR시 이슈 링크 반드시 할 것
 - 알맞은 라벨 추가할 것
+- 커밋은 최대한 잘라서 작은 단위마다 커밋하여 PR 
 
 #### ❗ 이슈
 코드 작업하기 전에 반드시 이슈 생성할 것

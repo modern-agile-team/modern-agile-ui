@@ -1,10 +1,14 @@
 import IconTypes from "@shared/types/icons";
 
-const StarFill = ({ color = "#212121", size = "24px" }: IconTypes) => {
+const StarFill = ({
+  color = "#212121",
+  width = "24",
+  height = "23",
+}: IconTypes) => {
   return (
     <svg
-      width={size}
-      height={size}
+      width={width}
+      height={height}
       viewBox="0 0 24 23"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

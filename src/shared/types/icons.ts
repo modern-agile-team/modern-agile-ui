@@ -1,6 +1,8 @@
 interface IconTypes {
   color?: string;
-  size?: string;
+  width?: string;
+  height?: string;
+  id?: string;
 }
 
 export default IconTypes;
