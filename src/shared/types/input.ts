@@ -16,3 +16,8 @@ export interface MACheckBoxTypes {
   label?: false | string;
   onChange: (e?: React.ChangeEvent<HTMLInputElement>) => void;
 }
+
+export interface MARatingTypes {
+  sizes?: "s" | "m" | "l";
+  disabled?: boolean;
+}
